@@ -1,0 +1,10 @@
+.card{
+    box-shadow: 0 20px 30px 0 rgba(185, 66, 66, 0.5);
+    font-weight: bold;
+}
+.card img{
+    max-height: 200px !important;
+}
+ol li{
+    list-style: circle;
+}

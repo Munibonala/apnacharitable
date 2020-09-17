@@ -1,0 +1,28 @@
+.bg-card{
+    background:linear-gradient(45deg, #33b5e5,#008ac2) !important;
+    color: #fff;
+    box-shadow: 0 10px 20px 0 rgba(0, 0,0, 0.5);
+    transition: all 0.8s;
+}
+.bg-card:hover{
+    background-color: #0daeab !important;
+    color: whitesmoke;
+    box-shadow: 0 50px 30px 0 rgba(0, 0,0, 0.5);
+    transform: scale(1.05);
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    margin-left: 6%;
+    margin-right: 6%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}

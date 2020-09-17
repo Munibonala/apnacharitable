@@ -1,0 +1,31 @@
+.active{
+    color:  whitesmoke !important;
+    border-bottom: 1px solid #0B0B0f;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.sticky{
+    position: sticky !important;
+    top:0 !important;
+}
+.bg-custom{
+    background-color:  #9d6eaffd;
+}
+.example-spacer{
+    flex: 1 1 auto;
+}
+.mat-toolbar-row{
+    height: auto !important;
+    background: linear-gradient(-45deg,#fec91d,#eccc60,transparent);
+}
+.mat-button{
+    font-size:medium;
+    transition: all 300ms;
+    font-weight: bold;
+    padding: 16px;
+}
+.mat-button:hover{
+    transform: scale(1.1);
+    color:  whitesmoke !important;
+    border-bottom: 1px solid #0B0B0f;
+    background-color: rgba(0, 0, 0, 0.5);
+}

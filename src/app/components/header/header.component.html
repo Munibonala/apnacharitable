@@ -1,0 +1,71 @@
+<mat-toolbar >
+    <mat-toolbar-row class="bg-white shadow ">
+                  <button #r="matMenuTrigger" mat-icon-button [matMenuTriggerFor]="menu" fxShow="true" fxHide.gt-sm>
+                    <mat-icon (click)="open(r)"  >menu</mat-icon>
+                  </button>
+                  <span>
+                    <img src="assets/Picture1.jpg" class="img-responsive" style="border-radius: 20px;" width="50px" >
+                </span>
+                <h2 class=" text-uppercase" style="font-family: 'Black Ops One', sans-serif;color: #2d3538;font-size: 1.4rem;">Apna Charitable Trust</h2>
+                <span class="example-spacer"></span>
+                  <mat-menu #menu="matMenu" [overlapTrigger]="false" fxShow="true" fxHide.gt-sm>
+                    <button mat-menu-item routerLinkActive="active" [routerLink]="['/home']">
+                      <mat-icon>home</mat-icon>
+                      <span>Home</span>
+                    </button>
+                    <button mat-menu-item routerLinkActive="active" [routerLink]="['/aboutUs']">
+                      <mat-icon>info</mat-icon>
+                      <span>About Us</span>
+                    </button>
+                    <button mat-menu-item routerLinkActive="active" [routerLink]="['/projects']">
+                      <mat-icon>local_mall</mat-icon>
+                      <span>Projects</span>
+                    </button>
+                    <button mat-menu-item routerLinkActive="active" [routerLink]="['/gallery']">
+                      <mat-icon>image</mat-icon>
+                      <span>Gallery</span>
+                    </button>
+                    <button mat-menu-item routerLinkActive="active" [routerLink]="['/contactUs']">
+                        <mat-icon>contact_mail</mat-icon>
+                        <span>Contact Us</span>
+                      </button>
+                      <button mat-menu-item routerLinkActive="active" [routerLink]="['/donate']">
+                        <mat-icon>money</mat-icon>
+                        <span>Donate</span>
+                      </button>
+                      <button mat-menu-item routerLinkActive="active" [routerLink]="['/documents']">
+                        <mat-icon>receipt</mat-icon>
+                        <span>Documents</span>
+                      </button>
+                  </mat-menu>
+      <div class="text-white text-dark" fxShow="true" fxHide.lt-md>
+            <a mat-button routerLinkActive="active" [routerLink]="['/home']"  class="text-decoration-none" >
+                <mat-icon>home</mat-icon>  Home
+            </a>
+          <a mat-button  class="text-decoration-none" routerLinkActive="active" [routerLink]="['/aboutUs']" >
+            <mat-icon>info</mat-icon>   About Us
+        </a>
+        <a mat-button class="text-decoration-none" routerLinkActive="active" [routerLink]="['/projects']">
+            <mat-icon> local_mall</mat-icon>  Projects
+        </a>
+        <a mat-button   class="text-decoration-none" routerLinkActive="active" [routerLink]="['/gallery']">
+            <mat-icon>image</mat-icon>  Gallery
+        </a>
+        
+        <a mat-button    class="text-decoration-none" routerLinkActive="active" [routerLink]="['/contactUs']">
+            <mat-icon> contact_mail</mat-icon>   Contact Us
+        </a>
+        <a mat-button   class="text-decoration-none"  routerLinkActive="active" [routerLink]="['/donate']">
+            <mat-icon>money</mat-icon>  Donate
+        </a>
+        <a mat-button   class="text-decoration-none"  routerLinkActive="active" [routerLink]="['/documents']">
+            <mat-icon>receipt</mat-icon>  Documents
+        </a>
+        <span class="example-spacer"></span>
+        <!-- <a href="https://www.facebook.com/apna.charitabletrust.9?ref=br_tf&epa=SEARCH_BOX" mat-button color="primary">
+                <i class="fab fa-facebook fa-2x"></i>
+        </a> -->
+      </div>
+  </mat-toolbar-row>
+
+ </mat-toolbar>    

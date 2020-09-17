@@ -1,0 +1,35 @@
+.text-teal{
+    color: #00796b !important;
+}
+ul li{
+    color: white !important;
+    text-decoration: none;
+}
+.bg-footer{
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url('../../../assets/footer.jpg');
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position-y: 30%;
+
+}
+.example-spacer {
+    flex: 1 1 auto !important;
+  }
+.unorder li {
+padding-top: 10px !important;
+}
+a:hover:not(.fb){
+color: #ffc107 !important;
+}
+
+.fb:hover{
+color: white;
+background-color: #3f51b5;
+}
+.active{
+color: #ffc107 !important;
+}

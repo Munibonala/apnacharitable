@@ -1,0 +1,7 @@
+::ng-deep .mat-dialog-container {
+    padding: 0 !important;
+}
+.head{
+    background:linear-gradient(45deg,#fec91d,#eccc60,transparent) ;
+    text-align: center;
+}

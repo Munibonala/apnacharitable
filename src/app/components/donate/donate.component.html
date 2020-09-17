@@ -1,0 +1,201 @@
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
+<section class="payment">
+    <div class="container-md">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="text-justify">
+                    <br>
+                    <h4>Donate Now :- <span class="font-weight-bold text-info">APNA CHARITABLE TRUST
+                            <hr class="text-dark"></span></h4>
+                    <h6 class="text-danger font-weight-bold">All Donations to Apna Charitable Trust are 50% Tax Exempt
+                        under section
+                        80G of IT Act, 1961</h6>
+                </div>
+                <div class="border shadow bg-white" style="border-radius: 20px;">
+                    <br>
+                    <h5 class="p-2 font-weight-bold">&nbsp; 1. Personal Information</h5>
+                    <form class="example-form p-3" [formGroup]="donationForm" (ngSubmit)="donate()">
+                        <div class="form-group row justify-content-center p-0">
+                            <label  class="col-sm-3 col-form-label"> Name<span class="text-danger">*</span></label>
+                            <div class="col-sm-9">
+                                <!-- <input  type="email" class="form-control"  id="inputEmail" placeholder="Enter Your Name"> -->
+                                <mat-form-field class="example-full-width ">
+                                        <input matInput type="text" formControlName="name" matInputAutofocus autocomplete="off" class="border  mr-2  px-1 py-2  bg-white">
+                                        <mat-error class="my-3">Name Required</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <!-- Address -->
+                        <div class="form-group row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">Address</label>
+                            <div class="col-sm-9">
+                                <div class="form-group basic-textarea rounded-corners">
+                                    <textarea rows="2" class="form-control " formControlName="address" placeholder="Enter Address"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-4">
+                                <mat-form-field class="example-full-width " floatLabel="always">
+                                    <label>City</label>
+                                        <input matInput type="text" autocomplete="off" formControlName="city"  class="border p-2 bg-white">
+                                        <mat-error class="my-3">Enter Your City Name</mat-error>
+                                </mat-form-field>
+                                    
+                            </div>
+                            <div class="col-sm-4">
+                                    <mat-form-field class="example-full-width " floatLabel="always">
+                                        <label>State</label>
+                                            <input matInput type="text" autocomplete="off" formControlName="state"  class="border p-2 bg-white">
+                                            <mat-error class="my-3">Enter Your State Name..</mat-error>
+                                    </mat-form-field>
+                            </div>
+                            <div class="col-sm-4">
+                                    <mat-form-field class="example-full-width " floatLabel="always">
+                                        <label>PinCode</label>
+                                            <input matInput type="text" autocomplete="off" formControlName="pincode" class="border p-2 bg-white">
+                                            <mat-error class="my-3">Enter Your Area PinCode..</mat-error>
+                                    </mat-form-field>
+                            </div>
+                        </div>
+                       
+                        <div class="form-group row">
+                                <div class="col-md-6 mb-3">
+                                    <mat-form-field class="example-full-width " floatLabel="always">
+                                        <label>Email<span class="text-danger">*</span></label>
+                                            <input matInput type="text" autocomplete="off" formControlName="emailID"  class="border p-2 bg-white">
+                                            <mat-error class="my-3">Enter a Valid Email</mat-error>
+                                    </mat-form-field>
+                                        
+                                </div>
+                                <div class="col-sm-6">
+                                        <mat-form-field class="example-full-width" floatLabel="always">
+                                            <label>Phone Number</label>
+                                                <input matInput type="text" formControlName="phoneNumber" class="border p-2 bg-white">
+                                                <mat-error class="mt-3">Enter Valid Phone Number</mat-error>
+                                        </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                   
+                                    <div class="col-sm-6 mb-3">
+                                            <mat-form-field class="example-full-width" floatLabel="always">
+                                                    <label>Pan Number<span class="text-danger">*</span></label>
+                                                    <input matInput type="text" formControlName="panNumber"  class="border p-2 bg-white">
+                                                    <mat-error class="mt-3">Enter Your PanNumber</mat-error>
+                                            </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <br>
+                                        <small>(For your IT returns purpose must enter Pan Number)</small>
+                                    </div>
+                                </div>
+                            <hr class="bg-dark">
+                    <h5 class="p-2 font-weight-bold"> 2. Desires</h5>
+                    <div class="form-group row">
+                            <label for="inputPassword" class="col-sm-3 col-form-label">I will Pay<span class="text-danger">*</span></label>
+                            <div class="col-sm-9 p-0 mb-2">
+                                <mat-form-field class="example-full-width ">
+                                    <input matInput autocomplete="off" type="text" formControlName="amount"  class="border ml-2 mr-2 normal p-2  bg-white">
+                                    <mat-error class="my-3">Enter Valid Amount</mat-error>
+                            </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-3 col-form-label">For Every</label>
+                                <div class="col-sm-9">
+                                        <mat-radio-group formControlName="payInterval" aria-label="Select an option" class="d-flex form-group row justify-content-around">
+                                                    <div class="col-md-3 col-sm-4">
+                                                        <mat-radio-button    value="Monthly">Monthly</mat-radio-button  >
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-4">
+                                                        <mat-radio-button   value="Quarterly">Quarterly</mat-radio-button  >
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-4">
+                                                        <mat-radio-button   value="HalfYearly">HalfYearly</mat-radio-button  >
+                                                    </div>
+                                                    <div class="col-md-3 col-sm-4">
+                                                        <mat-radio-button   value="Yearly">Yearly</mat-radio-button  >
+                                                    </div>
+                                            </mat-radio-group>
+                                </div>
+                            </div>
+                            <h5 class="p-2 text-primary">I would like my donation be applied towards</h5>
+                            <div class="form-group row  justify-content-start" formArrayName="donationAppliedFor">
+                                <div class="col-md-4 col-sm-6" *ngFor="let check of donationFormCheckBoxes.controls; let i = index">
+                                    <ng-container [formGroupName]="i">
+                                    <mat-checkbox value={{check.text}} formControlName="isChecked"   (change)="onChange($event)">
+                                        {{check.value?.text}}</mat-checkbox>
+                                    </ng-container>
+                                </div>
+                                
+                            </div>
+                                    <h5 class="p-2 font-weight-bold">3. Refer a Person &nbsp; <small>(Your references are most valuable to our trust.)</small></h5>
+                                    <div class="form-group row" formArrayName="refferedEmails">
+                                        <ng-container *ngFor="let item of frndEmail.controls; let i = index">
+                                            <label for="inputEmail2" class="col-sm-3 col-form-label">Email</label>
+                                            <div class="col-sm-9" >
+                                                <input type="email" [formControlName]="i"  class="form-control mb-2" id="inputEmail2" placeholder="Enter referral Email">
+                                            </div>
+                                        </ng-container>    
+                                        </div>
+                                        <div class="d-flex justify-content-end">
+                                            <button mat-raised-button type="button"(click)="addFrnd()"  color="primary">Add One More Person</button>
+                                        </div>
+                        
+                        <div class=" row justify-content-center">
+                            <div class="col-sm-12">
+                                <button type="submit" mat-raised-button color="accent" >Donate</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <br>
+                <h3 class="text-center">How Can You Donate</h3>
+                <br>
+                <div class="d-flex justify-content-center">
+                        <div class="border-danger w-75">
+                            <p>Scan QR Code</p>
+                            <div class="card">
+                                <figure class="figure">
+                                    <img src="../../../assets/Unitag_QRCode_1578382995246.png" width="100%">
+                                </figure>
+                            </div>
+                        </div>
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <div class="border-danger w-75">
+                        <h6 class="font-weight-bold">For Offline Donation </h6>
+                        <h6>Our Bank Details</h6>
+                        <table class="table">
+                            <tr>
+                                <td>Account Name <br> APNA CHARITABLE TRUST</td>
+                            </tr>
+                            <tr>
+                                <td>Bank Name<br> Canara Bank</td>
+                            </tr>
+                            <tr>
+                                <td>A/C No <br> 2994101010955</td>
+                            </tr>
+                            <tr>
+                                <td>Branch <br> ANANTAPUR</td>
+                            </tr>
+                            <tr>
+                                <td>IFSC/RTGS <br> CNRB0002994</td>
+                            </tr>
+                            <tr>
+                                <td>MICR CODE<br> 515015004</td>
+                            </tr>
+                            <tr>
+                                <td>PAN NO <br> AAETA9559Q</td>
+                            </tr>
+                        </table>
+                    </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>

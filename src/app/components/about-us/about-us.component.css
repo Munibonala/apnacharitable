@@ -1,0 +1,31 @@
+.t_img{
+    margin-top: -50px;
+    max-width: 150px;
+}
+.t_card{
+    background-color: #e6f6ff;
+    transition: all 2 !important;
+}
+.t_card:hover{
+    background-color: #0daeab;
+    color: whitesmoke;
+    box-shadow: 0 50px 30px 0 rgba(0, 0,0, 0.5);
+    transform: scale(1.05);
+}
+.carousel-item
+{
+display:block;
+opacity:0;
+transition: opacity 2s;
+}
+.carousel-item.active
+{
+display:block;
+opacity:1;
+transition: opacity 2s;
+
+}
+.example-card {
+    max-width: 400px;
+  }
+  
